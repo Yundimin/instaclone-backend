@@ -1,10 +1,10 @@
 # Insta Clone
 
 
-## User:
+ ## User:
 
 - [x] Create Account
 - [x] See Profile
-- [ ] Login
-- [ ] Edit Profile
+- [x] Login
+- [x] Edit Profile
 - [ ] Follow User
