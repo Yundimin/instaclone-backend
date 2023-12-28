@@ -13,7 +13,7 @@ export default gql`
       lastName: String
       username: String
       email: String
-      password: String
+      password: String,
     ): EditProfileResult!
   }
 `;
