@@ -1,7 +1,6 @@
 import { gql } from "apollo-server";
 
 export default gql`
-
   type EditProfileResult {
     ok: Boolean!
     error: String
@@ -13,7 +12,9 @@ export default gql`
       lastName: String
       username: String
       email: String
-      password: String,
+      password: String
+      bio: String
+      avatar: Upload
     ): EditProfileResult!
   }
 `;
