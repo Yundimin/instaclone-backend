@@ -3,7 +3,6 @@ import client from "../../client";
 import { protectedResolver } from "../users.utils";
 import { createWriteStream } from "fs";
 
-console.log(process.cwd());
 
 const resolverFn = async (
   _,
