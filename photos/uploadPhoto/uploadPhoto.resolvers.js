@@ -8,6 +8,8 @@ export default {
         let hashtagObj = [];
         if (caption) {
           const hashtags = caption.match(/#[\w]+/g);
+        //   한글 해시태그
+        //   const hashtags = caption.match(/#[\d|A-Z|a-z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]+/g) || [];
           hashtagObj = hashtags.map((hashtag) => ({
             where: { hashtag },
             create: { hashtag },
