@@ -24,10 +24,10 @@ model User {
   followers User[]    @relation("FollowRelation")
   following User[]    @relation("FollowRelation")
   comments  Comment[]
-  rooms Room[]
+  rooms     Room[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  messages Message[]
+  messages  Message[]
 }
 
 model Photo {
@@ -74,11 +74,10 @@ model Comment {
   photoId   Int
 }
 
-
 model Room {
   id        Int       @id @default(autoincrement())
   users     User[]
-  messages   Message[]
+  messages  Message[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 }
@@ -90,6 +89,7 @@ model Message {
   userId    Int
   room      Room     @relation(fields: [roomId], references: [id])
   roomId    Int
+  read      Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
