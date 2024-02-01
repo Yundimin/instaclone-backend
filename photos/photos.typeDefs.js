@@ -1,5 +1,10 @@
 import { gql } from "apollo-server";
 
+// type Photo 에  나중에
+// commentNumber: Int!
+// comments: [Comment]
+//  요고 두 줄 추가
+
 export default gql`
   type Photo {
     id: Int!
@@ -12,6 +17,7 @@ export default gql`
     createdAt: String!
     updatedAt: String!
     isMine: Boolean!
+    isLiked: Boolean!
   }
   type Hashtag {
     id: Int!
