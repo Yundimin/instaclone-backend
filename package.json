@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon --exec babel-node server --delay 2s",
-    "migrate": "npx prisma migrate dev --preview-feature"
+    "dev": "nodemon --exec babel-node src/server --delay 2s",
+    "migrate": "npx prisma migrate dev --preview-feature",
+    "studio": "npx prisma studio",
+    "build": "babel src --out-dir build",
+    "start": "node build/server"
   },
   "repository": {
     "type": "git",
@@ -17,11 +20,13 @@
   "devDependencies": {
     "@babel/core": "^7.23.5",
     "@babel/node": "^7.22.19",
+    "@babel/plugin-transform-runtime": "^7.24.3",
     "@babel/preset-env": "^7.23.5",
     "nodemon": "^3.0.2",
     "prisma": "^5.7.0"
   },
   "dependencies": {
+    "@babel/cli": "^7.24.1",
     "@graphql-tools/load-files": "^7.0.0",
     "@graphql-tools/merge": "^9.0.1",
     "@graphql-tools/schema": "^10.0.2",
